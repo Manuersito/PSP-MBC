@@ -2,7 +2,6 @@ package EJ1_4;
 
 import java.io.IOException;
 
-import java.util.Arrays;
 
 
 public class LeerNombre {
@@ -12,13 +11,14 @@ public class LeerNombre {
 
             if (args.length <= 0) {
 
-                System.err.println("Se necesita un programa a ejecutar");
+                System.err.println("No hay argumentos: ");
 
                 System.exit(-1);
 
             }
 
-            System.out.println("hola");
+            System.out.println("nombre: "+args[0]);
+            System.exit(1);
 
 
         }
