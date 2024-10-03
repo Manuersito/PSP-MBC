@@ -19,19 +19,11 @@ public class Ej1_5 {
         // Iniciamos el proceso
         Process p = pb.start();
 
-        // Leemos y mostramos la salida del proceso
-        try (InputStream in = p.getInputStream()) {
-            int c;
-            while ((c = in.read()) != -1) {
-                System.out.print((char) c);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
 
-        }
-
+        //capturamos el error con getErrorStream
         try (InputStream err = p.getErrorStream()) {
             int c;
+            //Leemos el error caracter a caracter para mostrarlo
             System.out.println("\nErrores del proceso:");
             while ((c = err.read()) != -1) {
                 System.out.print((char) c);
@@ -41,13 +33,6 @@ public class Ej1_5 {
         }
 
 
-        // Mostramos el valor de salida del proceso
-        try {
-            int exitVal = p.waitFor();
-            System.out.println("Valor de salida: " + exitVal);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
 
-        }
     }
 }
