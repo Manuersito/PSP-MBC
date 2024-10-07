@@ -1,1 +1,2 @@
-Cadena escrita: Hola mundo!
+Introduzca el texto: 
+CadenaEscrita: Hola mundo pero con redirect!

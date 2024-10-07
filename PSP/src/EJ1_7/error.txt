@@ -1,2 +1,0 @@
-Error: Could not find or load main class Ejemplo5
-Caused by: java.lang.ClassNotFoundException: Ejemplo5
