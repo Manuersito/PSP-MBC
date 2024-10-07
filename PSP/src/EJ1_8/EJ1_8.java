@@ -5,17 +5,21 @@ import java.io.*;
 public class EJ1_8 {
     public static void main(String[] args) throws IOException {
         // Ruta de los archivos windows
-//        File inputFile = new File("D:\\Manuersin\\Documents\\PSP-MBC\\PSP\\src\\EJ1_7\\entrada.txt");  // Archivo de entrada
-//        File outputFile = new File("D:\\Manuersin\\Documents\\PSP-MBC\\PSP\\src\\EJ1_7\\salida.txt");  // Archivo de salida estándar
+        File inputFile = new File("D:\\Manuersin\\Documents\\PSP-MBC\\PSP\\src\\EJ1_8\\entrada.txt");  // Archivo de entrada
+        File outputFile = new File("D:\\Manuersin\\Documents\\PSP-MBC\\PSP\\src\\EJ1_8\\salida.txt");  // Archivo de salida estándar
 
 
         //Ruta archivo linux
-        File inputFile = new File("/home/usuario/Documentos/PSP-MBC/PSP/src/EJ1_8/entrada.txt");  // Archivo de entrada
-        File outputFile = new File("/home/usuario/Documentos/PSP-MBC/PSP/src/EJ1_8/salida.txt");  // Archivo de salida estándar
+//        File inputFile = new File("/home/usuario/Documentos/PSP-MBC/PSP/src/EJ1_8/entrada.txt");  // Archivo de entrada
+//        File outputFile = new File("/home/usuario/Documentos/PSP-MBC/PSP/src/EJ1_8/salida.txt");  // Archivo de salida estándar
 
 
-        //Directorio carpeta class
-        File directorio = new File("/home/usuario/Documentos/PSP-MBC/PSP/out/production/PSP");
+        //Directorio carpeta class windows
+        File directorio = new File("D:\\Manuersin\\Documents\\PSP-MBC\\PSP\\out\\production\\PSP");
+
+//        //Directorio carpeta class linux
+//        File directorio = new File("/home/usuario/Documentos/PSP-MBC/PSP/out/production/PSP");
+
 
 
         // Crear ProcessBuilder para ejecutar este mismo programa
