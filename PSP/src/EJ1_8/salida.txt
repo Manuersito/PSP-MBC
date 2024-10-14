@@ -1,2 +1,0 @@
-Introduzca el texto: 
-CadenaEscrita: Hola mundo pero con redirect!
