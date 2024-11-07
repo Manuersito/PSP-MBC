@@ -20,7 +20,7 @@ public class HiloPrioridad extends Thread {
     public void run() {
         while (!stopHilo) {
             try{
-                Thread.sleep(100);
+                Thread.sleep(2);
             }catch(Exception e){ }
             c++;
         }

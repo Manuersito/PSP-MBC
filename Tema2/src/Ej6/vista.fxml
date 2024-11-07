@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="EJ6" alignment="CENTER" hgap="10" vgap="10">
+    <!-- Etiqueta de Hilo 1 -->
+    <Label text="HILO 1" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <ProgressBar fx:id="progressBar1" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <Slider fx:id="slider1" min="1" max="10" value="5" showTickLabels="true" showTickMarks="true" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+    <Label fx:id="labelProgreso1" text="Progreso: 0%" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+
+    <!-- Etiqueta de Hilo 2 -->
+    <Label text="HILO 2" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <ProgressBar fx:id="progressBar2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <Slider fx:id="slider2" min="1" max="10" value="5" showTickLabels="true" showTickMarks="true" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+    <Label fx:id="labelProgreso2" text="Progreso: 0%" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+
+    <!-- Etiqueta de Hilo 3 -->
+    <Label text="HILO 3" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ProgressBar fx:id="progressBar3" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    <Slider fx:id="slider3" min="1" max="10" value="5" showTickLabels="true" showTickMarks="true" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+    <Label fx:id="labelProgreso3" text="Progreso: 0%" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+
+    <!-- Botón para iniciar la carrera -->
+    <Button fx:id="btnIniciar" text="Comenzar Carrera" onAction="#comenzarCarrera" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+</GridPane>
