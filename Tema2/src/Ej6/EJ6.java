@@ -1,20 +1,24 @@
 package Ej6;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Parent;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.application.Platform;
 
 public class EJ6 extends Application {
 
+    @FXML
     private ProgressBar progressBar1, progressBar2, progressBar3;
+    @FXML
     private Slider slider1, slider2, slider3;
+    @FXML
     private Label labelProgreso1, labelProgreso2, labelProgreso3;
+    @FXML
     private Button btnIniciar;
+
     private boolean carreraEnCurso = false;
 
     public static void main(String[] args) {
@@ -22,10 +26,48 @@ public class EJ6 extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("CarreraHilos.fxml"));
+    public void start(Stage primaryStage) {
+        // Crear y configurar los elementos de la interfaz
+        GridPane root = new GridPane();
+        root.setHgap(10);
+        root.setVgap(10);
+
+        progressBar1 = new ProgressBar(0);
+        progressBar2 = new ProgressBar(0);
+        progressBar3 = new ProgressBar(0);
+
+        slider1 = new Slider(1, 10, 5);
+        slider2 = new Slider(1, 10, 5);
+        slider3 = new Slider(1, 10, 5);
+
+        labelProgreso1 = new Label("Progreso: 0%");
+        labelProgreso2 = new Label("Progreso: 0%");
+        labelProgreso3 = new Label("Progreso: 0%");
+
+        btnIniciar = new Button("Comenzar Carrera");
+        btnIniciar.setOnAction(event -> comenzarCarrera());
+
+        // Añadir elementos al GridPane
+        root.add(new Label("HILO 1"), 0, 0);
+        root.add(progressBar1, 1, 0);
+        root.add(slider1, 2, 0);
+        root.add(labelProgreso1, 3, 0);
+
+        root.add(new Label("HILO 2"), 0, 1);
+        root.add(progressBar2, 1, 1);
+        root.add(slider2, 2, 1);
+        root.add(labelProgreso2, 3, 1);
+
+        root.add(new Label("HILO 3"), 0, 2);
+        root.add(progressBar3, 1, 2);
+        root.add(slider3, 2, 2);
+        root.add(labelProgreso3, 3, 2);
+
+        root.add(btnIniciar, 1, 3);
+
+        Scene scene = new Scene(root, 600, 300);
         primaryStage.setTitle("Carrera de Hilos");
-        primaryStage.setScene(new Scene(root, 600, 300));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
@@ -77,7 +119,7 @@ public class EJ6 extends Application {
 
                 // Actualizar el progreso de la barra y la etiqueta en el hilo de JavaFX
                 double finalProgreso = progreso;
-                javafx.application.Platform.runLater(() -> {
+                Platform.runLater(() -> {
                     progressBar.setProgress(finalProgreso);
                     labelProgreso.setText("Progreso: " + (int) (finalProgreso * 100) + "%");
                 });
@@ -92,7 +134,7 @@ public class EJ6 extends Application {
             // Verificar si es el primer hilo en terminar la carrera
             if (progreso >= 1 && carreraEnCurso) {
                 carreraEnCurso = false;
-                javafx.application.Platform.runLater(() -> {
+                Platform.runLater(() -> {
                     btnIniciar.setDisable(false);
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Resultado de la Carrera");

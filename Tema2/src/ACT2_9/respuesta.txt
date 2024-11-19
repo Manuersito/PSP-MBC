@@ -1,0 +1,2 @@
+Quitando los 2 sleep se puede sacar la salida esperada poniendo en el constructor
+del productor con un 3 y al consumidor a 0
