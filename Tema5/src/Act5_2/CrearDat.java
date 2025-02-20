@@ -14,8 +14,8 @@ public class CrearDat {
 
         MessageDigest md = MessageDigest.getInstance("SHA-256");
 
-        String datos = "En un lugar de la mancha, "+
-                "de cuyo nombre no quiero acordarme, no ha mucho tiempo " +
+        String datos = "En un lugar de la Mancha, "+
+                "de cuyo ombre no quiero acordarme, no ha mucho tiempo " +
                 "Que vivia un hidalgo de los de lanza en astillero, "+
                 "adarga antigua, rocin flaco y galgo corredor.";
 
