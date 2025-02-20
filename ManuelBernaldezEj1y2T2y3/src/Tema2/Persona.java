@@ -19,12 +19,15 @@ public class Persona extends Thread {
         try {
 
             for (int i = 0; i < 2; i++) {
+                cantidad = (int) (Math.random()*500+1);
                 saldo.añadirCantidad(getName(),cantidad);
 
                 Thread.sleep(1000);
 
+                cantidad = (int) (Math.random()*500+1);
                 saldo.restarCantidad(getName(),cantidad);
                 Thread.sleep(1000);
+
             }
 
 
