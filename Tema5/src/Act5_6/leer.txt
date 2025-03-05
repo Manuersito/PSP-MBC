@@ -1,0 +1,24 @@
+Esta es la salida que da el ejercicio por cmd ya que tube que poner este comando para que funcione, esta partido en cachos para
+que quepa todo, debe estar en una linea
+
+
+java -Djava.security.auth.login.config=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\login.config
+-Djava.security.policy=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\permisos.policy -classpath
+D:\Manuersin\Documents\PSP-MBC\Tema5\out\production\Tema5 Act5_6.MainJaasAutenticacion
+
+
+
+D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6>java -Djava.security.auth.login.config=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\login.config -Djava.security.policy=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\permisos.policy -classpath D:\Manuersin\Documents\PSP-MBC\Tema5\out\production\Tema5 Act5_6.MainJaasAutenticacion
+Nombre de usuario: pedro
+Clave: abcd
+Usuario autenticado.....
+EL FICHERO NO EXISTE, LO CREO ...
+Fichero creado con datos...
+
+D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6>java -Djava.security.auth.login.config=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\login.config -Djava.security.policy=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_6\permisos.policy -classpath D:\Manuersin\Documents\PSP-MBC\Tema5\out\production\Tema5 Act5_6.MainJaasAutenticacion
+Nombre de usuario: pedro
+Clave: abcd
+Usuario autenticado.....
+EL FICHERO EXISTE ...
+Su contenido es:
+Esto es una línea de texto

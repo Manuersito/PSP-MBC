@@ -1,0 +1,7 @@
+PS D:\Manuersin\Documents\PSP-MBC\Tema5> java -D"java.security.auth.login.config=D:\Manuersin\Documents\PSP-MBC\Tema5\src\Act5_5\login.config" -classpath "D:\Manuersin\Documents\PSP-MBC\Tema5\out\production\Tema5" Act5_5.MainJaasAutenticacion
+Nombre de usuario: pedro
+Clave: abcd
+Usuario autenticado.....
+PS D:\Manuersin\Documents\PSP-MBC\Tema5>
+
+con el comando de la primera linea me funciona pero si ejecuto mainjaas no funciona da mensaje de error

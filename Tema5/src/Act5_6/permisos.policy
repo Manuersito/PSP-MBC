@@ -1,0 +1,9 @@
+grant {
+    permission javax.security.auth.AuthPermission "createLoginContext.EjemploLogin";
+    permission javax.security.auth.AuthPermission "modifyPrincipals";
+    permission javax.security.auth.AuthPermission "doAsPrivileged";
+};
+
+grant Principal EjemploPrincipal "pedro" {
+    permission java.io.FilePermission "fichero.txt", "read, write";
+};
